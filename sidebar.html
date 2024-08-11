@@ -3,32 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>belajar jquery 2</title>
+    <title>belajar jquery 3</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      #p1 {
+      * {
+        list-style: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-decoration: none;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+      }
+      #sidebar {
+        position: absolute;
+        width: 150px;
+        padding: 10px 20px;
+        background: rgb(40, 40, 49);
+        height: 100vh;
+        transform: translateX(0);
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        left: 0;
+        right: 0;
+        padding: 10px;
+      }
+      .header h2 {
+        padding-left: 5px;
+      }
+      .tombol {
+        display: flex;
+      }
+      #sidebar .link li {
+        margin-bottom: 10px;
+      }
+      #on {
+        display: none;
+      }
+      #on,
+      #off {
         cursor: pointer;
       }
-      #p2 {
-        cursor: pointer;
+      li {
+        background: transparent;
+        padding: 5px;
+        background-color: rgb(40, 40, 49);
+        border-radius: 7px;
+        transition: all 0.3s ease-in-out;
       }
-      #p3 {
-        cursor: pointer;
+      li:hover {
+        background-color: blueviolet;
       }
-      #p4 {
-        cursor: pointer;
-      }
-      #p5 {
-        cursor: pointer;
+      .content {
+        float: right;
+        width: 133vh;
+        height: 100vh;
+        z-index: 100;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(81, 81, 90);
       }
     </style>
   </head>
   <body>
-    <p id="p1">dissapier</p>
-    <p id="p2">leave me alone</p>
-    <p id="p3">click me 2x</p>
-    <p id="p4">fuck you</p>
-    <p id="p5">press enter</p>
+    <div class="header">
+      <div class="tombol">
+        <ion-icon name="grid-outline" id="off"></ion-icon>
+        <ion-icon name="grid" id="on"></ion-icon>
+      </div>
+      <div class="judul">
+        <h2>Logo</h2>
+      </div>
+    </div>
+    <div class="container" id="sidebar">
+      <ul class="link">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">My project</a></li>
+        <li><a href="#">education</a></li>
+        <li><a href="#">My skill</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>hello world</h1>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="./js/sidebar.js"></script>
   </body>
 </html>
